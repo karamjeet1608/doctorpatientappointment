@@ -6,4 +6,6 @@ import com.karam.doctorpatientappointment.dal.entities.Doctor_User;
 
 public interface DoctorUserRepository extends CrudRepository<Doctor_User, Integer> {
 
+	Doctor_User getBydoctoremail(String doctoremail);
+
 }

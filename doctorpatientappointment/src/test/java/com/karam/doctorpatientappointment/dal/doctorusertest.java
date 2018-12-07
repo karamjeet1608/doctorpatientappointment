@@ -22,18 +22,18 @@ public void testadddoctoruser()
 {
 	
 	Doctor_User doctoruser =new Doctor_User();
-	doctoruser.setDoctorfirstname("tester");
-	doctoruser.setDoctorgender("tester");
-	doctoruser.setDoctorareaaddress("tester");
-	doctoruser.setDoctoremail("sunny@123.com");
-	doctoruser.setDoctorcontact(213);
-	doctoruser.setDoctorexperience("tester");
-	doctoruser.setDoctorlastname("tester");
-	doctoruser.setDoctoroverallrating(11);
-	doctoruser.setDoctorpassword("tester");
-	doctoruser.setDoctorpostalcode(12);
-	doctoruser.setDoctorstreetaddress("tester");
-	doctoruser.setDoctorfees(112);
+	doctoruser.setDoctorfirstname("Tushar");
+	doctoruser.setDoctorgender("Tushartester");
+	doctoruser.setDoctorareaaddress("asdtester");
+	doctoruser.setDoctoremail("Tushar@123.com");
+	doctoruser.setDoctorcontact(21213);
+	doctoruser.setDoctorexperience("3years");
+	doctoruser.setDoctorlastname("Tusharsigh");
+	doctoruser.setDoctoroverallrating(2);
+	doctoruser.setDoctorpassword("check");
+	doctoruser.setDoctorpostalcode(112);
+	doctoruser.setDoctorstreetaddress("testermapped");
+	doctoruser.setDoctorfees(12);
 	
 	DoctorUserRepository.save(doctoruser);
 }

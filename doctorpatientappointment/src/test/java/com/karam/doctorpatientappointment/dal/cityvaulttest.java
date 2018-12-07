@@ -27,9 +27,9 @@ public class cityvaulttest {
 	{
 		
 		City_Vault cityvault =new City_Vault();
-		cityvault.setCitydescription("heidelberg");
-		cityvault.setCityid(1);
-		cityvault.setCityname("heidelberg");
+		cityvault.setCitydescription("mannheim");
+		cityvault.setCityid(2);
+		cityvault.setCityname("mannheim");
 		
 		CityVaultRespository.save(cityvault);
 	}
