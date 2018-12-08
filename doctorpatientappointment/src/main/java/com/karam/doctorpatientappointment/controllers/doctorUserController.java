@@ -1,5 +1,7 @@
 package com.karam.doctorpatientappointment.controllers;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,14 +17,20 @@ public class doctorUserController {
 	@Autowired
 	private DoctorUserRepository doctoruserRepository;
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(doctorUserController.class);
+	
 	@RequestMapping("/showReg")
 	public String showRegistrationPage() {
+		
+		LOGGER.info("inside showRegistrationPage");
 		return"login/doctorregisterUser";
 		
 	}
 	
 	@RequestMapping(value="doctorregisterUser",method=RequestMethod.POST)
 	public String register(@ModelAttribute("doctor_user")Doctor_User doctoruser)   {
+		
+		LOGGER.info("register");
 		
 		doctoruserRepository.save(doctoruser);
 		return"login/login";
@@ -32,6 +40,8 @@ public class doctorUserController {
 	public String login(@PathVariable("doctoremail")String doctoremail,
 			@PathVariable("doctorpassword")String doctorpassword,
 			ModelMap modelMap) {
+		
+		LOGGER.info("login");
 		
 		Doctor_User doctor_User = doctoruserRepository.getBydoctoremail(doctoremail);
 		if (doctor_User.getDoctorpassword().equals(doctorpassword)) {
@@ -45,6 +55,8 @@ public class doctorUserController {
 	
 	@RequestMapping("/registerUser")
 	public String showDashboardPage() {
+		
+		LOGGER.info("showDashboardPage");
 		return"login/dashboard";
 		
 	}
